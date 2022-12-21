@@ -1,10 +1,14 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    border: 1px solid black;
+
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@font-face {
+    font-family: FFantasy;
+    src: url(./final-fantasy/OPTIEngeEtienne.otf);
+}
 
 body {
     margin: 0;
@@ -13,13 +17,14 @@ body {
 }
 
 .container {
-    background-color: white;
     height: 100vh;
     width: 100vw;
     padding: 0 180px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./FF8.gif);
+    background-size: cover;
 }
 
 .left, .right {
@@ -28,6 +33,38 @@ body {
 
 .left {
     width: 500px;
+    background-image: url(./FF8.jpg);
+    background-position: 45% 75%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 110px;
+}
+
+header {
+    background-color: rgba(0,0,0, 40%);
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: FFantasy;
+    font-size: 45px;
+    width: 100%;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px auto 2px auto;
+    height: 70px;
+}
+
+.underline {
+    position: relative;
+    bottom: 55px;
+    background-color: black;
+    border: solid 2px black;
+    width: 55%;
 }
 
 .right {
@@ -35,15 +72,44 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 50px;
+    background-color: rgba(72, 77, 82, 0.35)
 }
 
 .intro {
     padding-bottom: 50px;
     font-size: 20px;
+    color: white;
 }
 
+div.intro > p,span.short-quote {
+    font-weight: bold;
+}
+
+p.long-quote {
+    margin-bottom: 25px;
+}
+
+span.short-quote {
+    font-style: italic;
+}
+
+
+.form {
+    width: 100%;
+}
+
+form {
+    background-color: rgba(243, 241, 241, 0.4);
+    /* box-shadow: 0px 5px 5px 0px grey; */
+    /* clip-path: inset(0px 0px -5px 0px); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    clip-path: inset(0 0px -5px 0);
+    padding-left: 20px;
+    border-right: none;
+}
+legend {
+    padding-top: 20px;
+}
 ul {
     display: flex;
     flex-direction: row;
@@ -51,6 +117,7 @@ ul {
     row-gap: 15px;
     column-gap: 50px;
     padding: 0;
+    padding-bottom: 38px
 }
 
 ul > li {
@@ -62,18 +129,74 @@ input, label {
     display: block;
 }
 
+input {
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    border: 3px solid #7593e7;
+    box-shadow: 0px 0px 3px grey;
+}
+
+input[type="password"]:empty {
+    border: 1px solid red;
+}
+
+input[id="f-name"]:valid {
+    border: 1px solid green;
+    box-shadow: 0px 0px 3px green;
+}
+
+ul::after {
+    content:'*Passwords do not match';
+    color: red;
+    position: relative;
+    z-index: 5;
+    font-size: 13px;
+    bottom: 10px;
+}
+
 label {
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 2px;
+    padding-bottom: 2px;
+    color: black;
 }
 
-form {
-    padding: 10px auto 10px auto;
+legend {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 button {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    font-family: 'Poppins';
+    margin-top: 30px;
+    margin-left: 20px;
+    border: 0.5px solid 
+    #4f5d8a;
+    background-color: 
+    #4f5d8a;
+    color: white;
+    font-weight: bold;
+}
+
+p.footer {
+    margin-top: 30px;
+}
+
+p.footer > span {
+    font-weight: bold;
+    color: #4f5d8a;
+    cursor: pointer;
+}
+
+.intro, .footer {
+    padding-left: 20px;
+    padding-right: 100px;
 }

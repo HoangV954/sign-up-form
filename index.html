@@ -6,25 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+
         <div class="container">
-
+            
             <div class="left">
-
+                <header> <p class="header">Final Fantasy VIII</p>
+                    <div class="underline"></div>
+                </header>
+                
             </div>
             
             <div class="right">
                 <div class="intro">
                     <p class="long-quote">To be friends, to like one another, and to love one another… You can’t do these things alone. You need somebody. I’ll be waiting for you. If you come here, you’ll find me.</p>
-                    <span class="short-quote">I promise.</span>
+                    <span class="short-quote">I promise...</span>
                 </div>
 
                 <div class="form">
                     <form action="">
-                        <legend>Be a SEED!</legend>
+                        <legend>Let's seize our future!</legend>
                         <ul>
                             <li>
                                 <label for="f-name">First name</label>
@@ -44,16 +50,16 @@
                             </li>
                             <li>
                                 <label for="password">Password</label>
-                                <input type="password" id="password" name="password">
+                                <input type="password" id="password" name="password" minlength="5">
                             </li>
                             <li>
                                 <label for="c-password">Confirm password</label>
-                                <input type="password" id="c-password" name="c-passwrod">
+                                <input type="password" id="c-password" name="c-passwrod" minlength="5">
                             </li>
                         </ul>
                     </form>
                     <button type="submit">Join Balamb Garden</button>
-                    <p>Already a SEED? <span>Log in</span></p>
+                    <p class="footer">Already a SEED? <span>Log in</span></p>
                 </div>
             </div>
     
